@@ -1,0 +1,122 @@
+@use "../foundation/index" as *;
+
+.p-case{
+    padding-top: 96px;
+    padding-bottom: 45px;
+    @include responsive(sm){
+        padding-top: 72px;
+        padding-bottom: 30px;
+    }
+    &__swiper{
+        padding-block: 10px !important;
+        padding-inline: 5px !important;
+    }
+    &__inner{
+        width: min(1024px,100%);
+        padding-inline: 68px;
+        margin-inline: auto;
+        position: relative;
+        overflow: visible;
+        @include responsive(sm){
+            padding-inline: 27px;
+        }
+    }
+    &__wrapper{
+        overflow: visible;
+        margin-top: 62px;
+        height: auto;
+        @include responsive(sm){
+            margin-top: 46px;
+        }
+    }
+    &__card{
+        width: 405px;
+        height: 488px;
+        padding-inline: 20px;
+        padding-top: 33px;
+        padding-bottom: 20px;
+        box-shadow: 0 5px 8px 3px rgba(51,51,51,.25);
+        border-radius: 28px 0 28px 0;
+        background: #FFFFFF;
+        @include responsive(sm){
+            height: 471px;
+            width: min(405px,100%);
+            padding-inline: 10px;
+            padding-top: 32px;
+        }
+        &__ttl{
+            font-size: 24px;
+            line-height: 1.8em;
+            font-weight: bold;
+            color: $cText;
+            margin-bottom: 24px;
+            @include responsive(sm){
+                font-size: 18px;
+            }
+            em{
+                font-style: normal;
+                color: $cPrimary;
+            }
+        }
+        &__txt{
+            font-size: 14px;
+            color: $cText;
+            line-height: 1.79em;
+            margin-bottom: 37px;
+            @include responsive(sm){
+                font-size: 12px;
+                line-height: 1.83em;
+                margin-bottom: 47px;
+            }
+            span{
+                display: block;
+            }
+        }
+    }
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    position: absolute;
+    width: rclamp(20,34,375,768) !important;
+    height: rclamp(20,34,375,768) !important;
+    // height: 34px !important;
+    border-radius: 50%;
+    background: $cPrimary;
+    color: #FFFFFF !important;
+    top: 56.5% !important;
+    transition: all .3s;
+
+}
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    font-family: 'Font Awesome 5 Free' !important;
+    font-weight: 900;
+    color: #fff;
+    font-size: rclamp(10,20,375,768) !important;
+
+}
+
+.swiper-button-prev::after{
+    content: '\f053' !important;
+    margin-right: 2px;
+}
+.swiper-button-next::after{
+    content: '\f054' !important;
+    margin-left: 2px;
+}
+.swiper-button-prev{
+    left: 18px !important;
+    @include responsive(sm){
+        left: 6px !important;
+    }
+}
+
+.swiper-button-next{
+    right: 18px !important;
+    @include responsive(sm){
+        right: 6px !important;
+    }
+}
+
+

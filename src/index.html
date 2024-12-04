@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- <link rel="icon" type="image/svg+xml" href="" /> -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/destyle.css@1.0.15/destyle.css"
+    />
+    <link rel="stylesheet" href="./scss/style.scss" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Goldman&family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robot" content="noindex" />
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+    <title>CareSend | 有資格介護人材が集まる介護派遣サービス</title>
+    <script type="module" src="./js/main.js" defer></script>
+  </head>
+  <body class="noto-sans-jp">
+    <header class="l-header">
+      <div class="l-header__inner">
+        <h1 class="l-header__logo">
+          <a href=""
+            ><img src="./images/header-logo.svg" alt="My Life Navi"
+          /></a>
+        </h1>
+        <nav class="l-header__nav">
+          <ul class="l-header__nav-list">
+            <li class="l-header__nav-item">
+              <a href="#toAbout" class="l-header__nav-txt">CareSendについて</a>
+            </li>
+            <li class="l-header__nav-item">
+              <a href="#toFeature" class="l-header__nav-txt">CareSendの特徴</a>
+            </li>
+            <li class="l-header__nav-item">
+              <a href="#toCase" class="l-header__nav-txt">導入事例</a>
+            </li>
+            <li class="l-header__nav-item">
+              <a href="#toPrice" class="l-header__nav-txt">料金</a>
+            </li>
+            <li class="l-header__nav-item">
+              <a href="#toFaq" class="l-header__nav-txt">よくある質問</a>
+            </li>
+          </ul>
+        </nav>
+        <a href="#toForm" class="l-header__btn"><img src="./images/mail.png" alt=""><span>資料請求</span></a>
+        <button type="button" id="js-hamburger" class="button p-hamburger__icon" aria-controls="js-glabal-menu" aria-expanded="false" aria-label="メニューを開閉する">
+          <span class="p-hamburger__icon__line"></span>
+          <span class="p-hamburger__icon__line"></span>
+          <span class="p-hamburger__icon__line"></span>
+          <p>メニュー</p>
+        </button>
+      </div><!-- /.l-header__inner -->
+      <nav class="p-hamburger" id="js-global-menu" aria-hidden="true">
+        <ul class="p-hamburger__list">
+          <li class="p-hamburger__item">
+            <a href="#toAbout" class="p-hamburger__txt">CareSendについて</a>
+          </li>
+          <li class="p-hamburger__item">
+            <a href="#toFeature" class="p-hamburger__txt">CareSendの特徴</a>
+          </li>
+          <li class="p-hamburger__item">
+            <a href="#toCase" class="p-hamburger__txt">導入事例</a>
+          </li>
+          <li class="p-hamburger__item">
+            <a href="#ToPrice" class="p-hamburger__txt">料金</a>
+          </li>
+          <li class="p-hamburger__item">
+            <a href="#toFaq" class="p-hamburger__txt">よくある質問</a>
+          </li>
+        </ul>
+        <a href="#toForm" class="p-hamburger__btn"><img src="./images/mail.png" alt=""><span>資料請求</span></a>
+      </nav>
+    </header><!-- /.l-header -->
+    <main class="l-main">
+      <section class="p-fv">
+        <div class="p-fv__inner">
+          <div class="p-fv__body">
+            <p class="p-fv__subCopy">＼最短一週間で人手不足が解消できる!!／</p>
+            <h3 class="p-fv__copy"><span>CareSendの介護派遣で</span><span>介護士が、すぐ見つかる</span></h3>
+            <p class="p-fv__txt"><span>「caresend」は、</span><span>高品質な介護派遣サービスを提供する</span><span class="u-disBlock">新しいプラットフォームです。</span></p>
+            <div class="p-fv__circles">
+              <article class="c-circle">
+                <p class="c-circle__upTxt">登録者</p>
+                <p class="c-circle__downTxt">58,000<span>人</span></p>
+                <span class="c-circle__toNote">*1</span>
+              </article>
+              <article class="c-circle">
+                <p class="c-circle__upTxt">即日派遣の</p>
+                <p class="c-circle__downTxt">実績多数</p>
+                <span class="c-circle__toNote">*2</span>
+              </article>
+              <article class="c-circle">
+                <p class="c-circle__upTxt">正社員雇用</p>
+                <p class="c-circle__downTxt u-marginLeft-12">693人</p>
+                <span class="c-circle__toNote">*2</span>
+              </article>
+            </div>
+            <p class="p-fv__note">※1 CareSend開始2023年4月時と2024年4月時の比較</p>
+            <p class="p-fv__note">※2 CareSend2023年度一年間の実績</p>
+          </div>
+          <figure class="p-fv__img"><img src="./images/job-listing1x.png" srcset="./images/job-listing2x.png" alt="" ></figure>
+          <form action="" class="p-form">
+            <h4 class="p-form__ttl">
+              <span>派遣事例が分かる資料をダウンロード!!</span>
+            </h4>
+            <div class="p-form__body">
+              <div class="p-form__fullName">
+                <p class="c-formInput p-form__firstName"><label>姓<span>*</span> <input type="text" name="name" autocomplete="family-name" placeholder="介護"></label></p>
+                <p class="c-formInput p-form__name"><label>名<span>*</span> <input type="text" name="name" autocomplete="given-name" placeholder="太郎"></label></p>
+              </div>
+              <p class="c-formInput p-form__category"><label>会社名<span>*</span> <input type="text" name="company" placeholder="株式会社CareSend"></label></p>
+              <p class="c-formInput p-form__category"><label>メールアドレス<span>*</span> <input type="email" name="name" placeholder="caresend@caresend.com"></label></p>
+              <p class="c-formInput p-form__category"><label>電話番号<span>*</span> <input type="tel" name="name" placeholder="000-0000-0000"></label></p>
+              <p class="p-form__txt">このフォームから送信された情報は、 プライバシーポリシー に基づいて処理されます。</p>
+              <a href="" class="c-btn p-form__btn">資料ダウンロード（無料）</a>
+            </div><!-- /.p-form__body -->
+          </form>
+        </div><!-- /.p-fv__inner -->
+      </section><!-- /.p-fv -->
+      <section class="p-achievement">
+        <h3 class="p-achievement__ttl">多くのお客様に選ばれ続けています</h3>
+        <div class="p-achievement__images">
+          <figure class="p-achievement__img"><img src="./images/jiseki 1 x1.png" srcset="./images/jiseki 1 x2"></figure>
+          <figure class="p-achievement__img"><img src="./images/jiseki-02 x1.png" srcset="./images/jiseki-02 x2"></figure>
+        </div>
+        <div class="swiper p-achievement__swiper">
+          <div class="swiper-wrapper p-achievement__swiper__wrapper">
+            <div class="swiper-slide"><figure class="p-achievement__swiper__img"><img src="./images/logo02.png" srcset="./images/logo02 2x.png"></figure></div>
+            <div class="swiper-slide"><figure class="p-achievement__swiper__img"><img src="./images/logo03.png" srcset="./images/logo03 2x.png"></figure></div>
+            <div class="swiper-slide"><figure class="p-achievement__swiper__img"><img src="./images/logo04.png" srcset="./images/logo04 2x.png"></figure></div>
+            <div class="swiper-slide"><figure class="p-achievement__swiper__img"><img src="./images/logo05.png" srcset="./images/logo05 2x.png"></figure></div>
+            <div class="swiper-slide"><figure class="p-achievement__swiper__img"><img src="./images/logo01.png" srcset="./images/logo01 2x.png"></figure></div>
+            <div class="swiper-slide"><figure class="p-achievement__swiper__img"><img src="./images/logo02.png" srcset="./images/logo02 2x.png"></figure></div>
+            <div class="swiper-slide"><figure class="p-achievement__swiper__img"><img src="./images/logo03.png" srcset="./images/logo03 2x.png"></figure></div>
+            <div class="swiper-slide"><figure class="p-achievement__swiper__img"><img src="./images/logo04.png" srcset="./images/logo04 2x.png"></figure></div>
+            <div class="swiper-slide"><figure class="p-achievement__swiper__img"><img src="./images/logo05.png" srcset="./images/logo05 2x.png"></figure></div>
+            <div class="swiper-slide"><figure class="p-achievement__swiper__img"><img src="./images/logo01.png" srcset="./images/logo01 2x.png"></figure></div>
+          </div>
+        </div>
+      </section><!-- /.p-achieve -->
+      <section class="p-about" id="toAbout">
+        <h2 class="c-ttl">CareSendについて</h2>
+        <div class="p-about__inner">
+          <p class="p-about__txt"><span>CareSendは、</span><span>人材不足に悩む介護施設を</span></p>
+          <p class="p-about__txt"><span>認定介護福祉士などの</span><span class="u-marginTop-2"><em>高スキル介護人材</em>の派遣で</span></p>
+          <p class="p-about__txt">支えるサービスです。</p>
+          <div class="p-about__box">
+            <picture class="p-about__box__img"><source srcset="./images/caresend-feature-01-sp.png" media="(max-width: 768px)" type="image/png" width="315px" height="648px">
+              <img src="./images/caresend-feature-01 1x.png" srcset="./images/caresend-feature-01 2x.png" alt="">
+            </picture>
+          </div>
+        </div>
+      </section><!-- /.p-about -->
+      <section class="p-feature" id="toFeature">
+        <h2 class="c-ttl">CareSendの特徴</h2>
+        <div class="p-feature__inner">
+          <div class="p-feature__wrapper">
+            <article class="p-feature__box">
+              <figure class="p-feature__box__img"><img src="./images/feature-01.png" srcset="./images/feature-01 2x.png" alt=""></figure>
+              <h3 class="p-feature__box__ttl">登録者の内5割が有資格者</h3>
+              <p class="p-feature__box__txt">「CareSend」の登録者の半数以上は、介護福祉士や看護師などの専門資格を保有しています。高い資格基準を満たすことで、利用者に信頼性の高いサービスを提供できています。</p>
+            </article>
+            <article class="p-feature__box">
+              <figure class="p-feature__box__img"><img src="./images/feature-02.png" srcset="./images/feature-02 2x.png" alt=""></figure>
+              <h3 class="p-feature__box__ttl"><span>登録型派遣と紹介予定派遣</span><span>の2種に対応</span></h3>
+              <p class="p-feature__box__txt">登録型派遣では、即戦力人材を最短即日で派遣することが可能です。また紹介予定派遣にも対応しているので、正社員雇用を考えている施設にもお役立ていただけます。</p>
+            </article>
+            <article class="p-feature__box">
+              <figure class="p-feature__box__img"><img src="./images/feature-03.png" srcset="./images/feature-03 2x.png" alt=""></figure>
+              <h3 class="p-feature__box__ttl"><span>派遣介護士の実績を</span><span>閲覧可能</span></h3>
+              <p class="p-feature__box__txt">「CareSend」の登録者の過去の派遣実績は、お問い合わせ頂いたユーザー限定で閲覧することができます。利用施設側のコメントなどを参照することが可能です。また、気になる介護士がいれば直接アプローチ頂くことも可能です。</p>
+            </article>
+            <article class="p-feature__box">
+              <figure class="p-feature__box__img"><img src="./images/feature-04.png" srcset="./images/feature-04 2x.png" alt=""></figure>
+              <h3 class="p-feature__box__ttl"><span>3社面談を実施し</span><span>お互い納得の上派遣</span></h3>
+              <p class="p-feature__box__txt">「CareSend」でマッチングした場合、弊社カウンセラーを交えた三者で面談を行い、ミスマッチが起こらないようにします。これは即日派遣の場合も同様です。</p>
+            </article>
+          </div><!-- /.p-feature__wrapper -->
+        </div><!-- /.p-feature__inner -->
+      </section><!-- /.p-feature -->
+      <section class="p-cta">
+        <h3 class="p-cta__txt"><span>登録介護士を</span><span>無料でご覧いただけます。</span></h3>
+        <a href="" class="c-btn p-cta__btn">無料で資料ダウンロード</a>
+      </section><!-- /.p-cta -->
+      <section class="p-case" id="toCase">
+        <h2 class="c-ttl">導入事例</h2>
+        <div class="p-case__inner">
+          <div class="swiper p-case__swiper">
+            <div class="swiper-wrapper p-case__wrapper">
+              <div class="swiper-slide">
+                <article class="p-case__card">
+                  <h3 class="p-case__card__ttl">慢性的な介護士不足が解決し、<br><em>優秀な人材</em>が確保できるように！</h3>
+                    <p class="p-case__card__txt">「CareSend」の登場で、慢性的な介護士不足に頭を抱える問題が解消しました。優秀な介護スタッフが手軽に利用できるため、施設の運営が安定し、利用者のケアに集中できるようになりました。登録型派遣と紹介予定派遣の両方が選択肢として用意され、利用者のニーズに応えることができるのが素晴らしいです。
+                      <span>またプラットフォーム上の登録介護士は、私達が普通に採用していたら絶対に巡り会えなかったであろうリーダー人材にも巡り会えましたので、とても満足しています。</span></p>
+                      <figure class="p-case__card__img"><img src="./images/case01.svg" alt=""></figure>
+                </article>
+              </div>
+              <div class="swiper-slide">
+                <article class="p-case__card">
+                  <h3 class="p-case__card__ttl">急な欠員補充から<em>正社員雇用</em>に繋がり、大変助かっています。</h3>
+                    <p class="p-case__card__txt">「CareSend」に急なニーズでも対応可能な介護士さんが登録されていることは、本当に心強かったです。その中でも、派遣していただいた介護士さんはとても素晴らしく、紹介予定派遣を経て正社員として採用することになりました。当該介護士の存在は施設全体にとって大きな価値を持っています。
+                      <span>今後も積極的に正社員登用を考えておりますので、良い介護士に恵まれることを祈りつつ、利用をさせていただきます。</span></p>
+                      <figure class="p-case__card__img"><img src="./images/case02.svg" alt=""></figure>
+                </article>
+              </div>
+              <div class="swiper-slide">
+                <article class="p-case__card">
+                  <h3 class="p-case__card__ttl"><em>ケアの質が向上！</em>CareSendで利用者満足度も上昇！</h3>
+                    <p class="p-case__card__txt">当施設では、長らく介護士不足に悩まされてきました。ある日、急な欠員が発生し、困り果てていた時に、CareSendを利用することにしました。登録型派遣で急遽派遣してもらった介護士は、驚くほどのプロ意識と思いやりを持ち、施設内での業務をスムーズにこなしてくれました。その後、彼女は紹介予定派遣を経て正式に採用され、施設の一員として活躍しています。彼女の尽力により、施設の雰囲気は一変し、利用者の満足度も大幅に向上しました。</p>
+                      <figure class="p-case__card__img"><img src="./images/case03.svg" alt=""></figure>
+                </article>
+              </div>
+              <div class="swiper-slide">
+                <article class="p-case__card">
+                  <h3 class="p-case__card__ttl"><em>派遣介護士の質</em>が高く、とても驚きました。</h3>
+                    <p class="p-case__card__txt">私たちの施設は、長年にわたり正社員だけで運営してきました。派遣の利用は考えたこともありませんでしたが、ある日、急な人手不足に悩まされ、"CareSend"を試してみることにしました。派遣された介護士は、私たちの期待をはるかに超える素晴らしい仕事ぶりでした。プロ意識や親切さに感動し、施設内の雰囲気が一変しました。
+                      <span>私たちは派遣介護士の活用に新たな可能性を見出し、今後は更にその先の「採用」につなげていきたく思っています。</span></p>
+                      <figure class="p-case__card__img"><img src="./images/case04.svg" alt=""></figure>
+                </article>
+              </div>
+
+            </div>
+          </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </section><!-- /.case -->
+      <section class="p-price" id="toPrice">
+        <h2 class="c-ttl">料金は成約手数料のみ!!</h2>
+        <div class="p-price__inner">
+          <div class="p-price__wrapper">
+            <article class="p-price__card">
+              <h3 class="p-price__card__ttl">初期費用</h3>
+              <p class="p-price__card__txt"><em>0</em>円</p>
+            </article>
+            <article class="p-price__card">
+              <h3 class="p-price__card__ttl">月額費用</h3>
+              <p class="p-price__card__txt"><em>0</em>円</p>
+            </article>
+            <article class="p-price__card">
+              <h3 class="p-price__card__ttl">成約手数料</h3>
+              <p class="p-price__card__txt"><em>12</em>%</p>
+            </article>
+          </div>
+          <p class="p-price__note"><span>・所属は弊社になるため、派遣時に支払われる介護士の給与は弊社が負担し、負担分を別途頂戴します。</span>
+            <span>・成約手数料は、介護士の派遣が決まった時点での派遣費用に0.12を乗算したものを足した金額になります。</span>
+            <span>例：半年間の派遣の場合、月額30万*6 + 180万*0.12 = 201.6万円</span></p>
+        </div>
+      </section><!-- /.p-price -->
+      <section class="p-faq" id="toFaq">
+        <h2 class="c-ttl">よくある質問</h2>
+        <div class="p-faq__inner">
+          <div class="p-faq__accordion">
+            <details class="p-faq__accordion__item">
+              <summary class="p-faq__accordion__item-q">
+                <p class="p-faq__accordion__item-q__content"><span class="c-icon--Q" alt="">Q</span><span>登録介護士はどこから確認できますか？</span></p><span class="c-icon--faq"></span>
+              </summary>
+              <div class="p-faq__accordion__item-a">
+                <p class="p-faq__accordion__item-a__content">CareSendのウェブサイトやアプリを通じて確認することができます</p>
+              </div>
+            </details>
+          </div>
+          <div class="p-faq__accordion">
+            <details class="p-faq__accordion__item">
+              <summary class="p-faq__accordion__item-q">
+                <p class="p-faq__accordion__item-q__content"><span class="c-icon--Q" alt="">Q</span><span>登録介護士の派遣先は？</span></p><span class="c-icon--faq"></span>
+              </summary>
+              <div class="p-faq__accordion__item-a">
+                <p class="p-faq__accordion__item-a__content">現在、全国の主要都市や地方都市を含む、多くの都道府県でサービスが展開されています。ただし、派遣可能なエリアは随時拡大されているため、最新の情報は資料請求してご確認ください。</p>
+              </div>
+            </details>
+          </div>
+          <div class="p-faq__accordion">
+            <details class="p-faq__accordion__item">
+              <summary class="p-faq__accordion__item-q">
+                <p class="p-faq__accordion__item-q__content"><span class="c-icon--Q" alt="">Q</span><span>登録介護士の資格取得などの支援は行っていますか？</span></p><span class="c-icon--faq"></span>
+              </summary>
+              <div class="p-faq__accordion__item-a">
+                <p class="p-faq__accordion__item-a__content">
+                  <span>はい、CareSendでは登録している介護士の資格取得などの支援も行っています。</span>
+                  <span class="u-marBottom15">具体的には、以下のような支援を提供しています。</span>
+
+                  <span>1. カウンセリングと情報提供：介護士が資格取得に興味を持っている場合、"CareSend"のカウンセラーが相談に乗り、必要な情報を提供します。</span>
+                  <span>2. 学習サポート：介護士が資格試験を受ける準備をする際には、学習支援や勉強のアドバイスを提供します。必要に応じて、関連する教材や学習リソースの提供も行います。</span>
+                  <span>3. 資格取得補助：介護士が資格試験に合格するための費用や手続きに関する支援を提供します。場合によっては、一部の費用を補助する場合もあります。</span>
+                  <span class="u-marBottom15">4. 研修プログラム："CareSend"が提供する研修プログラムに参加することで、介護士は専門知識やスキルを向上させることができます。これにより、彼らのキャリアの成長を支援します。</span>
+
+                  <span>CareSendは、介護士がより充実したキャリアを築くための支援を提供し、彼らの専門性と満足度を向上させることに取り組んでいます。</span></p>
+              </div>
+            </details>
+          </div>
+          <div class="p-faq__accordion">
+            <details class="p-faq__accordion__item">
+              <summary class="p-faq__accordion__item-q">
+                <p class="p-faq__accordion__item-q__content"><span class="c-icon--Q" alt="">Q</span><span>派遣の登録介護士を、派遣期間終了後に直接雇用することは可能ですか？</span></p><span class="c-icon--faq"></span>
+              </summary>
+              <div class="p-faq__accordion__item-a">
+                <p class="p-faq__accordion__item-a__content"><span>はい、派遣期間終了後に直接雇用することは可能です。ただし、一般派遣と紹介予定派遣の場合には異なる手続きがあります。
+                  一般派遣の場合、介護士は派遣会社の従業員として派遣されます。派遣期間終了後に直接雇用する場合には、派遣会社と介護施設間で新たな雇用契約を締結する必要があります。この場合、派遣会社に対して雇用の手数料や補償金が発生することがあります。</span>
+                  <span>一方、紹介予定派遣の場合、介護士は派遣先で一定期間勤務した後、雇用主（派遣先の介護施設）と直接雇用契約を結ぶことができます。派遣期間終了後に直接雇用する場合、通常は派遣会社に対して雇用の手数料が支払われることがありますが、派遣期間中に雇用契約の条件が明確にされているため、一般派遣よりも手続きがスムーズです。
+                  要するに、一般派遣の場合は新たな雇用契約を派遣会社と介護施設間で締結する必要がありますが、紹介予定派遣の場合は介護施設と介護士との直接雇用契約に移行することができます。</span></p>
+              </div>
+            </details>
+          </div>
+          <div class="p-faq__accordion">
+            <details class="p-faq__accordion__item">
+              <summary class="p-faq__accordion__item-q">
+                <p class="p-faq__accordion__item-q__content"><span class="c-icon--Q" alt="">Q</span><span>CareSendはどのように介護士を選んでいますか？</span></p><span class="c-icon--faq"></span>
+              </summary>
+              <div class="p-faq__accordion__item-a">
+                <p class="p-faq__accordion__item-a__content">
+                  <span class="u-marBottom15">CareSendでは、介護士を選ぶ際に以下の手順を通じて厳密な選考プロセスを行っています</span>
+
+                  <span>1. 登録プロセス：介護士は、"CareSend"のウェブサイトやアプリを通じて登録申請を行います。この際に、必要な資格や経験、専門知識などの情報が提供されます。</span>
+                  <span>2. 書類審査：登録申請が受け付けられた後、"CareSend"のチームが提出された書類や情報を審査し、資格や経験の適格性を確認します。</span>
+                  <span>3. 面接：審査に合格した介護士は、面接の機会を得ます。面接では、介護の専門知識やコミュニケーション能力、応対態度などが評価されます。</span>
+                  <span>4. スキル評価：適格な介護士は、必要に応じて実地でのスキル評価を受けることがあります。これにより、介護スキルやケアの品質を確認します。</span>
+                  <span class="u-marBottom15">5. 登録完了：選考プロセスを通過した介護士は、"CareSend"の登録スタッフとして承認されます。利用者のニーズに応じて、派遣や紹介予定派遣の依頼が介護士に送られます。</span>
+
+                  このような厳密な選考プロセスを通じて、"CareSend"は高品質な介護スタッフを提供し、利用者の安心と満足度を確保しています。</p>
+              </div>
+            </details>
+          </div>
+        </div> <!-- /.p-faq__inner -->
+      </section><!-- /.p-faq -->
+      <section class="p-footerFaq">
+        <h2 class="c-ttl u-txtWhite"><span>介護派遣に関する資料を</span><span>無料でダウンロード</span></h2>
+        <div class="p-footerFaq__inner">
+          <div class="p-footerFaq__wrapper">
+            <div class="p-footerFaq__body">
+              <p class="p-footerFaq__copy"><span>CareSendに興味をお持ち頂き、ありがとうございます。</span>
+                <span>本フォームを送信頂きますと、サービス資料を送付させていただきます。</span></p>
+                <figure class="p-footerFaq__img"><img src="./images/whitepaper.svg" alt=""></figure>
+            </div>
+            <form action="" class="p-form" id="toForm" style="margin-top: 0;">
+              <h4 class="p-form__ttl">
+                <span>派遣事例が分かる資料をダウンロード!!</span>
+              </h4>
+              <div class="p-form__body">
+                <div class="p-form__fullName">
+                  <p class="c-formInput p-form__firstName"><label>姓<span>*</span> <input type="text" name="name" autocomplete="family-name" placeholder="介護"></label></p>
+                  <p class="c-formInput p-form__name"><label>名<span>*</span> <input type="text" name="name" autocomplete="given-name" placeholder="太郎"></label></p>
+                </div>
+                <p class="c-formInput p-form__category"><label>会社名<span>*</span> <input type="text" name="company" placeholder="株式会社CareSend"></label></p>
+                <p class="c-formInput p-form__category"><label>メールアドレス<span>*</span> <input type="email" name="name" placeholder="caresend@caresend.com"></label></p>
+                <p class="c-formInput p-form__category"><label>電話番号<span>*</span> <input type="tel" name="name" placeholder="000-0000-0000"></label></p>
+                <p class="p-form__txt">このフォームから送信された情報は、 プライバシーポリシー に基づいて処理されます。</p>
+                <a href="" class="c-btn p-form__btn">資料ダウンロード（無料）</a>
+              </div><!-- /.p-form__body -->
+            </form>
+          </div>
+        </div><!-- /.p-footerFaq__inner -->
+      </section><!-- /.p-footerFaq -->
+      <footer class="l-footer">
+        <h2 class="l-footer__img"><img src="./images/header-logo.svg" alt=""></h2>
+        <small class="l-footer__copyLight">© CaseSend, Inc.</small>
+      </footer>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,154 @@
+@use "../foundation/index" as *;
+
+.p-form{
+    width: min(400px,100%);
+    height: 586px;
+    background: #FFFFFF;
+    border-radius: 5px;
+    padding-inline: 8px;
+    padding-top: 8px;
+    @include responsive(md){
+        margin-inline: auto;
+        margin-top: 44px;
+    }
+    @include responsive(sm){
+        height: 571px;
+    }
+    &__ttl{
+        background: $cPrimary;
+        color: #FFFFFF;
+        border-radius: 5px;
+        width: 100%;
+        height: 52px;
+        font-weight: bold;
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        padding-top: 2px;
+        @include responsive(sm){
+            font-size: 16px;
+            padding-right: 4px;
+            padding-bottom: 2px;
+        }
+        span{
+            display: inline-block;
+        }
+        &::after{
+            content: "";
+            position: absolute;
+            background-color: $cPrimary;
+            width: 16px;
+            height: 14px;
+            bottom: -12px;
+            clip-path: polygon(0 0,50% 100%, 100% 0);
+            @include responsive(sm){
+                width: 17px;
+                height: 16px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+    }
+    &__body{
+        margin-inline: 8px;
+        margin-top: 23px;
+        @include responsive(sm){
+            margin-inline: rclamp(0,8,375,432);
+            margin-top: 24px;
+        }
+    }
+    &__fullName{
+        display: flex;
+        gap: 18px;
+        @include responsive(sm){
+            gap: 9px;
+        }
+    }
+    &__firstName{
+        display: inline-block;
+        input{
+        width: min(175px,42.4vw);
+        height: 48px;
+        }
+    }
+    &__name{
+        // margin-left: 14px;
+        display: inline-block;
+        @include responsive(sm){
+            margin-left: auto;
+        }
+        input{
+        width: min(175px,42.4vw);
+        height: 48px;
+        }
+    }
+    &__company{
+        margin-top: 15px;
+        input{
+            width: 100%;
+            height: 48px;
+        }
+    }
+    &__category{
+        margin-top: 15px;
+        input{
+            width: 100%;
+            height: 48px;
+        }
+    }
+    &__txt{
+        margin-top: 25px;
+        font-weight: 400;
+        color: $cText;
+        line-height: 1.5em;
+        font-size: 14px;
+        padding-right: 2px;
+        @include responsive(sm){
+            font-size: 12px;
+        }
+    }
+    &__btn{
+        background-color: $cPrimary;
+        color: #FFFFFF;
+        margin-inline: auto;
+        margin-top: 30px;
+        padding-top: 4px;
+        width: 320px;
+        height: 52px;
+        font-size: 20px;
+        @include responsive(sm){
+            padding-top: 0;
+            margin-top: 40px;
+            width: 246px;
+            height: 42px;
+            font-size: 16px;
+        }
+    }
+}
+
+.c-formInput{
+    font-weight: bold;
+    font-size: 14px;
+    color: $cText;
+    span{
+        color: #F90000;
+        font-size: 12px;
+        vertical-align: top;
+    }
+    input{
+        display: block;
+        margin-top: 6px;
+        border-radius: 5px;
+        background: #F5F8FA;
+        border: solid 1px #CED4DA;
+        padding-inline: 7px;
+        padding-top: 4px;
+        &::placeholder{
+            color: #AAAAAA;
+            font-size: 16px;
+            font-weight: 400;
+        }
+    }
+}

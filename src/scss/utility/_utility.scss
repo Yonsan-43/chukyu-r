@@ -1,0 +1,35 @@
+@use "../foundation/index" as *;
+
+.u-disBlock{
+    display: block;
+}
+
+.u-disInline{
+    display: inline;
+}
+
+.u-disNone {
+    display: none;
+}
+
+.u-marBottom15{
+    margin-bottom: 15px;
+}
+
+.u-txtWhite{
+    color: #FFFFFF !important;
+}
+
+.u-marginLeft-12{
+    margin-left: 12px;
+    @include responsive(sm){
+        margin-left: 0;
+    }
+}
+
+.u-marginTop-2{
+    @include responsive(sm){
+        margin-top: -2px;
+        margin-bottom: 2px;
+    }
+}

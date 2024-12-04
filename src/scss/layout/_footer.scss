@@ -1,0 +1,18 @@
+@use "../foundation/index" as *;
+
+.l-footer{
+    text-align: center;
+    background-color: #FFFFFF;
+    padding-top: 24px;
+    padding-bottom: 18px;
+    height: 145px;
+    &__img{
+        margin-bottom: 31px;
+    }
+    &__copyLight{
+        font-family: "Goldman", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 12px;
+    }
+}

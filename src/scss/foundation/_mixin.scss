@@ -1,0 +1,45 @@
+// レスポンシブ
+@mixin responsive($size){
+    $with:0;
+    @if($size == lg){
+        $with:1200px;
+    } @else if($size == md){
+        $with:1080px;
+    } @else if($size == sm){
+        $with:768px;
+    }
+    @media screen and (max-width:$with) {
+        @content;
+    }
+  }
+
+  @mixin responsive--min($size){
+    $with:0;
+    @if($size == llg){
+        $with:2500px;
+    } @else if($size == lmd){
+        $with:1800px;
+    } @else if($size == lg){
+        $with:1441px;
+    } @else if($size == md){
+        $with:1080px;
+    } @else if($size == sm){
+        $with:768px;
+    }
+    @media screen and (min-width:$with) {
+        @content;
+    }
+  }
+
+
+@function rclamp($min, $max, $minViewport, $maxViewport) {
+    $vwScale: ($max - $min) / ($maxViewport - $minViewport);  // vw単位でのスケールを計算
+    $baseOffset: $min - $minViewport * $vwScale;  // 基準となる最小値からのオフセットを計算
+
+    $minRem: $min / 16;  // 最小値をremに変換
+    $maxRem: $max / 16;  // 最大値をremに変換
+    $baseOffsetRem: $baseOffset / 16;  // オフセットをremに変換
+    $vwScaleRem: $vwScale * 100;  // vwスケールを調整
+
+    @return clamp(#{$minRem}rem, #{$baseOffsetRem}rem + #{$vwScaleRem}vw, #{$maxRem}rem);
+  }

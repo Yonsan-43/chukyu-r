@@ -1,0 +1,16 @@
+{
+  "name": "chukyu-r",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "scss": "^0.2.4",
+    "swiper": "^11.1.14",
+    "vite": "^5.4.9"
+  }
+}

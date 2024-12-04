@@ -1,0 +1,97 @@
+@use "../foundation/index" as *;
+
+.l-header{
+    height: 96px;
+    width: 100%;
+    position: fixed;
+    background: #FFFFFF;
+    z-index: 1000;
+    @include responsive(sm){
+        height: 64px;
+    }
+    &__inner{
+        width: 100%;
+        height: 100%;
+        // max-width: 1536px;
+        // z-index: 1200;
+        margin-inline: auto;
+        padding-left: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include responsive(sm){
+            padding-left: 16px;
+        }
+    }
+    &__logo{
+        @include responsive(sm){
+            width: 139px;
+            height: 32px;
+        }
+        img{
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+    &__nav{
+        margin-left: -58px;
+        @include responsive(lg){
+            margin-left: 0;
+        }
+        @include responsive(md){
+            display: none;
+        }
+    }
+    &__nav-list{
+        display: flex;
+        gap: 28.5px;
+        align-items: center;
+        margin-block: auto;
+    }
+    &__nav-item{
+        display: block;
+    }
+    &__nav-txt{
+        color: $cPrimary;
+        font-weight: bold;
+    }
+    &__btn{
+        // margin-left: auto;
+        background: $cPrimary;
+        height: 100%;
+        width: 189px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include responsive(md){
+            margin-left: auto;
+        }
+        @include responsive(sm){
+            width: 64px;
+            flex-direction: column;
+        }
+        span{
+            color: #FFFFFF;
+            display: inline-block;
+            margin-left: 7px;
+            font-weight: bold;
+            @include responsive(sm){
+                font-weight: 400;
+                font-size: 10px;
+                margin-left: 0;
+                margin-top: 4px;
+            }
+        }
+        img{
+            width: 32px;
+            height: 32px;
+            display: inline-block;
+            @include responsive(sm){
+                width: 24px;
+                height: 24px;
+            }
+        }
+    }
+}
+
+

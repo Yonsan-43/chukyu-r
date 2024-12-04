@@ -1,0 +1,87 @@
+@use "../foundation/index" as *;
+
+.p-price{
+    background: #F9F9F9;
+    padding-top: 90px;
+    padding-bottom: 57px;
+    @include responsive(sm){
+        padding-top: 72px;
+        padding-bottom: 39px;
+    }
+    &__inner{
+        width: min(1024px,100%);
+        margin-inline: auto;
+        padding-inline: 56px;
+        @include responsive(sm){
+            padding-inline: 31px;
+        }
+    }
+    &__wrapper{
+        margin-top: 60px;
+        padding-bottom: 48px;
+        display: flex;
+        gap: 12px;
+        @include responsive(sm){
+            margin-top: 25px;
+        }
+    }
+    &__card{
+        width: 296px;
+        max-height: 277px;
+        border-radius: 5px;
+        box-shadow: 0 4px 4px 0 rgba(51,51,51,.25);
+        border-top: 12px solid $cPrimary;
+        text-align: center;
+        padding-bottom: 90px;
+        padding-top: 30px;
+        // padding-inline: 75px;
+        @include responsive(sm){
+            // width: 96px;
+            // aspect-ratio: 96, 91;
+            height: auto;
+            padding-bottom: 14px;
+            padding-top: 8px;
+            border-top: 6px solid $cPrimary;
+        }
+        &__ttl{
+            color: $cText;
+            font-weight: bold;
+            font-size: 24px;
+            // margin-top: 30px;
+            @include responsive(sm){
+                font-size: 12px;
+            }
+        }
+        &__txt{
+            color: $cText;
+            font-weight: bold;
+            font-size: 32px;
+            margin-top: 14px;
+            @include responsive(sm){
+                margin-top: 9px;
+                font-size: 12px;
+            }
+            em{
+                font-style: normal;
+                font-size: 96px;
+                color: $cPrimary;
+                @include responsive(sm){
+                    font-size: 35px;
+                }
+            }
+        }
+    }
+    &__note{
+        font-size: 14px;
+        color: $cText;
+        line-height: 1.8em;
+        @include responsive(sm){
+            font-size: 12px;
+            padding-right: 2px;
+            line-height: 1.82em;
+        }
+        span{
+            display: block;
+        }
+    }
+}

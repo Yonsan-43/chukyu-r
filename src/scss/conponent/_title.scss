@@ -1,0 +1,13 @@
+@use "../foundation/index" as *;
+
+.c-ttl{
+    // font-size: 32px;
+    font-size:rclamp(24,32,375,768);
+    font-weight: bold;
+    text-align: center;
+    color: $cText;
+    line-height: 1.5em;
+    span{
+        display: inline-block;
+    }
+}

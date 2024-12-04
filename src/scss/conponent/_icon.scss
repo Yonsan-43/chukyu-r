@@ -1,0 +1,72 @@
+@use "../foundation/index" as *;
+
+.c-icon--faq{
+    width: 32px;
+    height: 32px;
+    display: inline;
+    position: relative;
+    margin-left: auto;
+    @include responsive(sm){
+        // margin-right: 12px;
+        // align-items: center;
+        // justify-content: center;
+        width: 16px;
+        min-width: 16px;
+        height: 16px;
+        margin-left: auto;
+        margin-block: auto;
+    }
+    &::before, &::after{
+        content: "";
+        position: absolute;
+        background-color: $cText;
+        transition: transform .3s ease;
+        border-radius: 1px;
+    }
+    &::before{
+        width: 2px;
+        height: 32px;
+        top: 0;
+        left: 16px;
+        transform-origin: center;
+        @include responsive(sm){
+            height: 16px;
+            left: 7px;
+        }
+    }
+    &::after{
+        width: 32px;
+        height: 2px;
+        top: 14px;
+        left: 0;
+        @include responsive(sm){
+            width: 16px;
+            top: 7px;
+        }
+    }
+}
+
+.c-icon--Q{
+    background-color: $cPrimary;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    color: #FFFFFF;
+    font-family: "Goldman", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 32px;
+    text-align: center;
+    // padding-top: 8px;
+    display: block;
+    @include responsive(sm){
+        width: 32px;
+        min-width: 32px;
+        height: 32px;
+        font-size: 16px;
+        padding-top: 4.5px;
+        padding-right: 1px;
+    }
+}

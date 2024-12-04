@@ -1,0 +1,111 @@
+@use "../foundation/index" as *;
+
+.p-faq{
+    background: #F9F9F9;
+    padding-top: 88px;
+    padding-bottom: 72px;
+    @include responsive(sm){
+        padding-top: 45px;
+    }
+    &__inner{
+        width: min(1064px, 100%);
+        margin-inline: auto;
+        padding-inline: 20px;
+        @include responsive(sm){
+            padding-inline: 16px;
+        }
+    }
+    &__accordion{
+        margin-bottom: 24px;
+        @include responsive(sm){
+            margin-bottom: 16px;
+        }
+        &:first-of-type{
+            margin-top: 62px;
+            @include responsive(sm){
+                margin-top: 42px;
+            }
+        }
+        &:last-of-type{
+            margin-bottom: 0;
+        }
+        summary{
+            list-style: none;
+            cursor: pointer;
+        }
+        details[open] .c-icon--faq{
+            &::before{
+            // transform: scaleY(0);
+            // background-color: #FFFFFF;
+            opacity: 0;
+            }
+            &::after{
+                background-color: #FFFFFF;
+            }
+        }
+        &__item{
+            border-radius: 10px;
+            background-color: #FFFFFF;
+            color: $cText;
+        }
+        &__item-q{
+            // padding-block: auto;
+            padding-left: 36px;
+            padding-right: 24px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            // color: #FFFFFF;
+            border-radius: 10px 10px 0 0;
+            // background-color: $cPrimary;
+            // padding-bottom: 18px;
+            @include responsive(sm){
+                padding-inline: 10px;
+                padding-block: auto;
+                height: 64px;
+            }
+            &__content{
+                display: flex;
+                // justify-content: space-between;
+                align-items: center;
+                font-weight: bold;
+                font-size: 16px;
+                line-height: 1.8em;
+                @include responsive(sm){
+                    font-size: 14px;
+                }
+                img{
+                    @include responsive(sm){
+                        width: 32px;
+                    }
+                }
+                span{
+                    margin-left: 24px;
+                    margin-right: 8px;
+                    line-height: 1.5em;
+                    @include responsive(sm){
+                        margin-left: 13px;
+                        // min-width: 253px;
+                    }
+                }
+            }
+        }
+        &__item-a{
+            padding-block: 24px;
+            padding-inline: 36px;
+            @include responsive(sm){
+                padding-block: 10px;
+                padding-inline: 10px;
+            }
+            &__content{
+                line-height: 1.8em;
+                @include responsive(sm){
+                    font-size: 14px;
+                }
+                span{
+                    display: block;
+                }
+            }
+        }
+    }
+}

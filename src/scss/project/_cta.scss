@@ -1,0 +1,36 @@
+@use "../foundation/index" as *;
+
+.p-cta{
+    background: url(../images/background-cta\ pc.jpg) no-repeat center/ cover;
+    width: 100%;
+    min-height: 240px;
+    text-align: center;
+    padding-top: 60px;
+    @include responsive(sm){
+        background: url(../images/background-cta\ sp.jpg) no-repeat center/ cover;
+        padding-block: 40px;
+        padding-inline: 17px;
+    }
+    &__txt{
+        color: #FFFFFF;
+        font-size: 24px;
+        font-weight: bold;
+        line-height: 1.8em;
+        // padding-inline: 17px;
+        span{
+            display: inline-block;
+        }
+    }
+    &__btn{
+        margin-inline: auto;
+        color: $cPrimary;
+        background: #FFFFFF;
+        margin-top: 24px;
+        width: 320px;
+        height: 52px;
+        font-size: 20px;
+        @include responsive(sm){
+            margin-top: 38px;
+        }
+    }
+}

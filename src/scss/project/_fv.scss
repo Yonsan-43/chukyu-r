@@ -1,0 +1,182 @@
+@use "../foundation/index" as *;
+
+.p-fv{
+    width: 100%;
+    min-height: 850px;
+    background: linear-gradient(90deg, $cPrimary, #02D1FF);
+    padding-top: 180px;
+    position: relative;
+    @include responsive(md){
+        position: initial;
+        background: linear-gradient(180deg, $cPrimary 50%, #02D1FF 60%);
+        padding-bottom: 26px;
+    }
+    @include responsive(sm){
+        padding-top: 104px;
+    }
+    &__inner{
+        margin-inline: auto;
+        padding-inline: 20px;
+        display: flex;
+        justify-content: space-between;
+        width: min(1240px ,100%);
+        @include responsive(md){
+            flex-direction: column;
+        }
+        @include responsive(sm){
+            padding-inline: 16px;
+        }
+    }
+    &__body{
+        color: #FFFFFF;
+        padding-top: 4px;
+        margin-left: 24px;
+        @include responsive(md){
+            margin-inline: auto;
+        }
+        @include responsive(sm){
+            padding-top: 3px;
+        }
+    }
+    &__subCopy{
+        font-weight: 400;
+        // font-size: 20px;
+        font-size: rclamp(14,20,375,768);
+        margin-bottom: 14px;
+        @include responsive(md){
+            text-align: center;
+        }
+        @include responsive(sm){
+            margin-bottom: 20px;
+        }
+    }
+    &__copy{
+        font-weight: bold;
+        // font-size: 56px;
+        font-size: rclamp(24,56,375,1200);
+        line-height: 1.5em;
+        margin-bottom: 16px;
+        @include responsive(sm){
+            text-align: center;
+            margin-bottom: 24px;
+            line-height: 1.8em;
+            text-align: left;
+            width: fit-content;
+            margin-inline: auto;
+        }
+        span{
+            display: block;
+        }
+    }
+    &__txt{
+        font-weight: 400;
+        // font-size: 20px;
+        font-size: rclamp(14,20,375,768);
+        line-height: 1.5em;
+        margin-bottom: 37px;
+        @include responsive(md){
+            text-align: center;
+        }
+        @include responsive(sm){
+            margin-bottom: 16px;
+            line-height: 1.8em;
+        }
+        span{
+            @include responsive(sm){
+                display: block;
+            }
+
+        }
+    }
+    &__circles{
+        display: flex;
+        // gap: 24px;
+        gap: rclamp(6,24,375,768);
+        padding-left: 6px;
+        margin-bottom: 27px;
+        @include responsive(sm){
+            padding-left: 0;
+            margin-bottom: 24px;
+        }
+    }
+    &__note{
+        margin-bottom: 6px;
+        font-weight: 400;
+        font-size: 12px;
+        @include responsive(sm){
+            margin-bottom: 5px;
+        }
+    }
+    &__img{
+        position: absolute;
+        width: 360px;
+        height: 202px;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        @include responsive(lg){
+            left: 45%;
+        }
+        @include responsive(md){
+            position: initial;
+            margin-inline:auto;
+            transform: translateX(0);
+        }
+        @include responsive(sm){
+            margin-left: -8px;
+            margin-top: -19px;
+        }
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+.c-circle{
+    background: #FFFFFF;
+    width: rclamp(110,162,375,768);
+    height: rclamp(110,162,375,768);
+    border-radius: 50%;
+    padding-top: 38px;
+    text-align: center;
+    @include responsive(sm){
+        padding-top: 27px;
+        width: 110px;
+    }
+    &__upTxt{
+        color: $cPrimary;
+        text-align: center;
+        font-weight: bold;
+        // font-size: 24px;
+        font-size: rclamp(16,24,375,768);
+        margin-bottom: 23px;
+        @include responsive(sm){
+            margin-bottom: 16px;
+        }
+    }
+    &__downTxt{
+        color: $cPrimary;
+        text-align: center;
+        // font-size: 32px;
+        font-size: rclamp(18,32,375,768);
+        font-weight: bold;
+        display: inline-block;
+        vertical-align: text-top;
+        line-height: 1.1em;
+        >span{
+            font-size: 24px;
+            @include responsive(sm){
+                font-size: 18px;
+            }
+        }
+    }
+    &__toNote{
+        color: $cText;
+        font-size: 12px;
+        display: inline-block;
+        vertical-align: text-top;
+        margin-left: -3px;
+        font-weight: bold;
+    }
+}

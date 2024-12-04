@@ -1,0 +1,66 @@
+@use "../foundation/index" as *;
+
+.p-feature{
+    padding-top: 100px;
+    padding-bottom: 31px;
+    @include responsive(sm){
+        padding-top: 56px;
+    }
+    &__inner{
+        margin-inline: auto;
+        width: min(1024px, 100%);
+        padding-inline: 20px;
+        @include responsive(sm){
+            padding-inline: 17px;
+        }
+    }
+    &__wrapper{
+        margin-top: 51px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 24px;
+        justify-content: center;
+        @include responsive(sm){
+            margin-top: 51px;
+        }
+    }
+    &__box{
+        width: 480px;
+        height: 325px;
+        text-align: center;
+        padding-inline: 31px;
+        padding-top: 13px;
+        padding-bottom: 32px;
+        border: solid 1px $cPrimary;
+        @include responsive(sm){
+            height: auto;
+            // min-height: 325px;
+            width: 100%;
+            padding-right: 29px;
+            padding-bottom: 23px;
+            padding-left: 29px;
+            // padding-inline: 29px;
+        }
+        &__ttl{
+            color: #F47500;
+            font-weight: bold;
+            font-size: 20px;
+            line-height: 1.5em;
+            margin-top: 19px;
+            span{
+                @include responsive(sm){
+                    display: block;
+                }
+            }
+        }
+        &__txt{
+            color: $cText;
+            line-height: 1.8em;
+            font-size: 16px;
+            margin-top: 18px;
+            text-align: left;
+            // letter-spacing: .01em;
+        }
+    }
+}
+
