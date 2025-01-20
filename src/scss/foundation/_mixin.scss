@@ -7,6 +7,8 @@
         $with:1080px;
     } @else if($size == sm){
         $with:768px;
+    } @else if($size == ss){
+        $with:350px;
     }
     @media screen and (max-width:$with) {
         @content;

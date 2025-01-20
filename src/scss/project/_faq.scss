@@ -32,6 +32,9 @@
         summary{
             list-style: none;
             cursor: pointer;
+            &::-webkit-details-marker{
+                display: none;
+            }
         }
         details[open] .c-icon--faq{
             &::before{

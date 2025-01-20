@@ -111,7 +111,7 @@
         position: absolute;
         width: 360px;
         height: 202px;
-        bottom: 0;
+        bottom: -84px;
         left: 50%;
         transform: translateX(-50%);
         @include responsive(lg){
@@ -123,7 +123,7 @@
             transform: translateX(0);
         }
         @include responsive(sm){
-            margin-left: -8px;
+            padding-right: 8px;
             margin-top: -19px;
         }
         img{
@@ -142,7 +142,7 @@
     text-align: center;
     @include responsive(sm){
         padding-top: 27px;
-        width: 110px;
+        // width: 110px;
     }
     &__upTxt{
         color: $cPrimary;

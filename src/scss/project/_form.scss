@@ -114,7 +114,7 @@
         color: #FFFFFF;
         margin-inline: auto;
         margin-top: 30px;
-        padding-top: 4px;
+        padding-top: 2px;
         width: 320px;
         height: 52px;
         font-size: 20px;
@@ -124,6 +124,20 @@
             width: 246px;
             height: 42px;
             font-size: 16px;
+        }
+    }
+    &__end-msg{
+        display: none;
+        margin-top: 45px;
+        color: $cText;
+        font-weight: bold;
+        text-align: center;
+        opacity: 0;
+        transition: opacity 1s ease;
+        &.show{
+            // transition: opacity 1s ease;
+            display: block;
+            opacity: 1;
         }
     }
 }

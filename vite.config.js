@@ -1,6 +1,7 @@
 import { defineConfig } from "vite";
 
 export default defineConfig({
+    base: './',
     root: './src',
     build: {
         outDir: '../dist',
@@ -17,12 +18,12 @@ export default defineConfig({
                 }
                 //ビルド時のCSS名を明記してコントロールする
                 if(extType === 'css') {
-                  return `assets/css/style.css`;
+                  return `css/style.css`;
                 }
-                return `assets/${extType}/[name][extname]`;
+                return `${extType}/[name][extname]`;
               },
-              chunkFileNames: 'assets/js/[name].js',
-              entryFileNames: 'assets/js/[name].js',
+              chunkFileNames: 'js/[name].js',
+              entryFileNames: 'js/[name].js',
             },
           },
     },
