@@ -13,7 +13,7 @@ document
       const targetId = this.getAttribute("href");
       const targetElement = document.querySelector(targetId);
       if (targetElement) {
-        var targetPosition =
+      let targetPosition =
           targetElement.getBoundingClientRect().top + window.scrollY - 100;
         window.scrollTo({
           top: targetPosition,
@@ -125,9 +125,6 @@ document.querySelectorAll(".p-faq__accordion details").forEach((details) => {
     event.preventDefault();
     const contentA = details.querySelector(".p-faq__accordion__item-a");
     const contentQ = details.querySelector(".p-faq__accordion__item-q");
-    const imgToggle = details.querySelectorAll(
-      ".p-faq__accordion__item-q__content img"
-    );
     const icon = details.querySelector(".c-icon--Q");
     // Function to get padding based on screen width
     const getPadding = () => {
@@ -140,54 +137,58 @@ document.querySelectorAll(".p-faq__accordion details").forEach((details) => {
 
     if (details.open) {
       // Close animation
+      contentQ.style.backgroundColor = "#FFFFFF";
+      contentQ.style.color = "#333333";
+      icon.style.backgroundColor = "#007FC6";
+      icon.style.color = "#FFFFFF";
+      contentA.style.opacity = "0";
+      // details.removeAttribute("open");
       const animation = contentA.animate(
         [
           {
             maxHeight: contentA.scrollHeight + "px",
-            opacity: 1,
-            paddingTop: getPadding(),
+            paddingBlock: getPadding(),
           },
-          { maxHeight: "0", opacity: 0, paddingTop: "0" },
+          { maxHeight: "0", paddingBlock: "0" },
         ],
         {
-          duration: 300,
-          easing: "ease-out",
+          duration: 500,
+          easing: "linear",
         }
       );
       animation.onfinish = () => {
         details.removeAttribute("open");
         contentA.style.maxHeight = "";
-        contentQ.style.backgroundColor = "#FFFFFF";
-        contentQ.style.color = "#333333";
-        icon.style.backgroundColor = "#007FC6";
-        icon.style.color = "#FFFFFF";
+        contentQ.style.borderRadius = "10px"
+        // icon.style.backgroundColor = "#007FC6";
       };
     } else {
       // Open animation
       details.setAttribute("open", "");
-      contentA.style.maxHeight = "0";
       contentA.style.opacity = "0";
+      contentQ.style.backgroundColor = "#007FC6";
+      contentQ.style.color = "#FFFFFF";
+      icon.style.backgroundColor = "#FFFFFF";
+      icon.style.color = "#007FC6";
+      contentQ.style.borderRadius = "10px 10px 0 0";
       requestAnimationFrame(() => {
+        contentA.style.maxHeight = contentA.scrollHeight + "px";
         contentA.animate(
           [
-            { maxHeight: "0", paddingTop: "0" },
+            { maxHeight: "0", paddingBlock: "0" },
             {
               maxHeight: contentA.scrollHeight + "px",
-              paddingTop: getPadding(),
+              paddingBlock: getPadding(),
             },
           ],
           {
-            duration: 300,
-            easing: "ease-in",
+            duration: 500,
+            easing: "linear",
           }
         ).onfinish = () => {
           contentA.style.maxHeight = "";
           contentA.style.opacity = 1;
-          contentA.style.paddingTop = getPadding();
-          contentQ.style.backgroundColor = "#007FC6";
-          contentQ.style.color = "#FFFFFF";
-          icon.style.backgroundColor = "#FFFFFF";
-          icon.style.color = "#007FC6";
+          // contentQ.style.borderRadius = "10px 10px 0 0"
         };
       });
     }
@@ -221,7 +222,7 @@ function closeBgmenu() {
   jsHamburger.setAttribute("aria-expanded", false);
   jsGlobalMenu.style.visibility = "hidden";
   jsGlobalMenu.setAttribute("aria-hidden", "true");
-  document.querySelector(".hamburger").style.position = "absolute";
+  // document.querySelector(".hamburger").style.position = "absolute";
 }
 
 //AOS設定

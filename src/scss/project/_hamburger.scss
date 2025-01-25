@@ -120,16 +120,16 @@
     background-color: $cPrimary;
     left: 0;
     // top: -100vh;
-    transition: top .3s;
+    transition: visibility 0s .3s;
     @include responsive--min(md){
-        display: none;
+        // display: none;
     }
     &__item{
         padding-inline: 16px;
         padding-block: 24px;
         border-bottom: solid 1px #FFFFFF;
         height: 64px;
-        transition: all .3s;
+        // transition: all .1s;
         :hover{
           opacity: 0.7;
           // background-color: #fff;
