@@ -8,7 +8,7 @@
     position: relative;
     @include responsive(md){
         position: initial;
-        background: linear-gradient(1.52deg,  #02D1FF 43%, $cPrimary 52.5%);
+        // background: linear-gradient(90deg, $cPrimary, #02D1FF);
         padding-bottom: 26px;
 
     }

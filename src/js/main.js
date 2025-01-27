@@ -141,19 +141,18 @@ document.querySelectorAll(".p-faq__accordion details").forEach((details) => {
       contentQ.style.color = "#333333";
       icon.style.backgroundColor = "#007FC6";
       icon.style.color = "#FFFFFF";
-      contentA.style.opacity = "0";
-      // details.removeAttribute("open");
       const animation = contentA.animate(
         [
           {
             maxHeight: contentA.scrollHeight + "px",
             paddingBlock: getPadding(),
+            opacity: "1"
           },
-          { maxHeight: "0", paddingBlock: "0" },
+          { maxHeight: "0", paddingBlock: "0",opacity: "0" },
         ],
         {
           duration: 500,
-          easing: "linear",
+          easing: "ease-out",
         }
       );
       animation.onfinish = () => {
@@ -165,7 +164,7 @@ document.querySelectorAll(".p-faq__accordion details").forEach((details) => {
     } else {
       // Open animation
       details.setAttribute("open", "");
-      contentA.style.opacity = "0";
+      // contentA.style.opacity = "0";
       contentQ.style.backgroundColor = "#007FC6";
       contentQ.style.color = "#FFFFFF";
       icon.style.backgroundColor = "#FFFFFF";
@@ -175,19 +174,20 @@ document.querySelectorAll(".p-faq__accordion details").forEach((details) => {
         contentA.style.maxHeight = contentA.scrollHeight + "px";
         contentA.animate(
           [
-            { maxHeight: "0", paddingBlock: "0" },
+            { maxHeight: "0", paddingBlock: "0",opacity: "0"},
             {
               maxHeight: contentA.scrollHeight + "px",
               paddingBlock: getPadding(),
+              opacity: "1"
             },
           ],
           {
             duration: 500,
-            easing: "linear",
+            easing: "ease-out",
           }
         ).onfinish = () => {
           contentA.style.maxHeight = "";
-          contentA.style.opacity = 1;
+          // contentA.style.opacity = 1;
           // contentQ.style.borderRadius = "10px 10px 0 0"
         };
       });
