@@ -25,6 +25,6 @@ export default defineConfig({
               chunkFileNames: 'js/[name].js',
               entryFileNames: 'js/[name].js',
             },
-          },
+        },
     },
 })

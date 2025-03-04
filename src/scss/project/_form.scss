@@ -159,6 +159,9 @@
         border: solid 1px #CED4DA;
         padding-inline: 7px;
         padding-top: 4px;
+        &:focus{
+            border: solid 2px blue;
+        }
         &::placeholder{
             color: #AAAAAA;
             font-size: 16px;
