@@ -10,7 +10,7 @@
   },
   "devDependencies": {
     "aos": "^2.3.4",
-    "scss": "^0.2.4",
+    "sass-embedded": "^1.100.0",
     "swiper": "^11.1.14",
     "vite": "^5.4.9"
   }

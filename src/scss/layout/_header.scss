@@ -47,6 +47,29 @@
         gap: 28.5px;
         align-items: center;
         margin-block: auto;
+        li span {
+            display: inline-block;
+            position: relative;
+            &::after{
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: -4px;
+                width: 100%;
+                height: 2px;
+                background: $cPrimary;
+                scale: 0;
+                transition: scale .5s ease;
+            }
+            @media (any-hover: hover) {
+                &:hover{
+                    cursor: pointer;
+                    &::after {
+                        scale: 1;
+                    }
+                }
+            }
+        }
     }
     &__nav-item{
         display: block;
