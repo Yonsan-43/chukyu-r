@@ -24,13 +24,16 @@
         }
     }
     &__logo{
+        aspect-ratio: 227/52;
+        height: auto;
+        object-fit: cover;
         @include responsive(sm){
             width: 139px;
-            height: 32px;
+            aspect-ratio: 139/32;
         }
         img{
             width: 100%;
-            object-fit: cover;
+            height: auto;
         }
     }
     &__nav{
